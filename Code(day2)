@@ -1,0 +1,30 @@
+\\ insertion sort
+
+#include<iostream>
+ using namespace std;
+ int main(){
+  int i,n;
+  cout<<"Enter the size of array: ";
+  cin>>n;
+ int a[n],key;
+cout<<"Enter the values in array:"<<endl;
+   for ( i = 0; i < n; i++)
+    {
+      cout <<"a["<<i<<"] = ";
+      cin>>a[i];
+    }
+    for (int k =1; k<n; k++){
+    int temp = a[k];
+     int m =k-1;
+     while(m>=0 && a[m] > temp){
+        a[m+1] = a[m];
+         m--;
+    }
+    a[m+1] = temp;
+ }
+  for ( int j = 0; j < n; j++)
+     {
+      cout<< " " <<a[j];
+     }
+ return 0;
+ }
